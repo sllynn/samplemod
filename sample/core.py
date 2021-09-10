@@ -4,9 +4,15 @@ from . import helpers
 def get_hmm():
     """Get a thought."""
     return 'hmmm...'
-
+  
+def get_huh():
+    """Question your existence."""
+    return 'huh...'
 
 def hmm():
     """Contemplation..."""
-    if helpers.get_answer():
-        print(get_hmm())
+    answer = helpers.get_answer()
+    if answer:
+      print(get_hmm())
+    else:
+      print(get_huh())
